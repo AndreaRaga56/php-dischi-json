@@ -21,22 +21,10 @@ $dischi = json_decode($dischi, true);
         <h1>Disky</h1>
     </header>
 
-    <main class="container text-center mb-5">
-        <div class="row row-cols-md-3 g-5">
-            <?php
-            foreach ($dischi as $disco) {
-                echo '<div class="col">
-                        <div class="my-card h-100">
-                            <div class="img-container"><img src="' . $disco['url_cover'] . '" alt=""></div>
-                            <h5 class="mt-3">' . $disco['titolo'] . '</h5>
-                            <p class="mt-2">' . $disco['artista'] . '</p>
-                            <p class="mt-2">' . $disco['anno_pubblicazione'] . '</p>
-                        </div>
-                    </div>';
-            } ?>
-        </div>
 
-        <form class="mt-5" action="./server.php" method="POST">
+
+    <main class="container text-center mb-5">
+        <form class="mt-5 mb-5" action="./server.php" method="POST">
             <h2 class="m-2">Aggiungi un Nuovo Album</h2>
             <div class="row mb-3">
                 <div class="col">
@@ -61,6 +49,21 @@ $dischi = json_decode($dischi, true);
             <button type="submit" class="btn btn-primary">Aggiungi Album</button>
         </form>
 
+        <hr>
+
+        <div class="row row-cols-md-3 g-5 mt-2">
+            <?php
+            foreach ($dischi as $disco) {
+                echo '<div class="col">
+                        <div class="my-card h-100">
+                            <div class="img-container"><img src="' . $disco['url_cover'] . '" alt=""></div>
+                            <h5 class="mt-3">' . $disco['titolo'] . '</h5>
+                            <p class="mt-2">' . $disco['artista'] . '</p>
+                            <p class="mt-2">' . $disco['anno_pubblicazione'] . '</p>
+                        </div>
+                    </div>';
+            } ?>
+        </div>
 
     </main>
 </body>
