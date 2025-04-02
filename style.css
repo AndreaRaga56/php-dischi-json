@@ -23,14 +23,28 @@ header{
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
     text-align: center;
     padding: 1.5rem;
+    border-radius: 10px;
 }
 
 .my-card img{
     max-width: 100%;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    margin-top: 1rem;
 }
 
 p{
     padding: 0px;
     margin: 0px;
+}
+.img-container{
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+form.mt-5{
+    background-color: antiquewhite;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border-radius: 10px;
 }
